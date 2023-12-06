@@ -1,0 +1,51 @@
+package ml.sunyufei.score;
+
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
+
+public class MyViewModel extends ViewModel {
+    private MutableLiveData<Integer> aTeamScore;
+    private MutableLiveData<Integer> bTeamScore;
+
+    private int aBack, bBack;
+
+    public MutableLiveData<Integer> getATeamScore() {
+        if (aTeamScore == null) {
+            aTeamScore = new MutableLiveData<>();
+            aTeamScore.setValue(0);
+        }
+        return aTeamScore;
+    }
+
+    public MutableLiveData<Integer> getBTeamScore() {
+        if (bTeamScore == null) {
+            bTeamScore = new MutableLiveData<>();
+            bTeamScore.setValue(0);
+        }
+        return bTeamScore;
+    }
+
+    public void addATeam(int p) {
+        aBack = aTeamScore.getValue();
+        bBack = bTeamScore.getValue();
+        aTeamScore.setValue(aTeamScore.getValue() + p);
+    }
+
+    public void addBTeam(int p) {
+        aBack = aTeamScore.getValue();
+        bBack = bTeamScore.getValue();
+        bTeamScore.setValue(bTeamScore.getValue() + p);
+    }
+
+    public void reset() {
+        aBack = aTeamScore.getValue();
+        bBack = bTeamScore.getValue();
+        aTeamScore.setValue(0);
+        bTeamScore.setValue(0);
+    }
+
+    public void undo() {
+        aTeamScore.setValue(aBack);
+        bTeamScore.setValue(bBack);
+    }
+}

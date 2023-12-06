@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score</string>
+    <string name="textview1">Team A</string>
+    <string name="textview2">Team B</string>
+    <string name="plus1">+1</string>
+    <string name="plus2">+2</string>
+    <string name="plus3">+3</string>
+    <string name="undo">undo</string>
+    <string name="reset">reset</string>
+</resources>

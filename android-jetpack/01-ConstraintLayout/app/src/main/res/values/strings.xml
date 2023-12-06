@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="app_version">1.0.0beta</string>
+    <string name="button">Login</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="image_desc">avatar</string>
+</resources>

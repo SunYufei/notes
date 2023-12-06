@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UIControlsDemo</string>
+    <string name="button">Button</string>
+    <string name="android">Android</string>
+    <string name="ios">iOS</string>
+    <string name="avatar">avatar</string>
+    <string name="golang">Golang</string>
+    <string name="dart">Dart</string>
+    <string name="java">Java</string>
+    <string name="switchText">Switch</string>
+</resources>
