@@ -1,0 +1,13 @@
+{
+   "name": "notes",
+   "version": "23.12.6",
+   "scripts": {
+      "build": "vitepress build docs",
+      "dev": "vitepress dev docs"
+   },
+   "devDependencies": {
+      "vitepress": "latest"
+   },
+   "author": "SunYufei",
+   "license": "MIT"
+}
