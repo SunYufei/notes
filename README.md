@@ -6,6 +6,10 @@
 -  使用 [VitePress](https://vitepress.dev) 搭建
 -  使用 GitHub Actions 自动构建至 GitHub Pages
 
+## 目录
+
+[机器学习](ML/)
+
 ## 许可
 
 代码：[MIT](LICENSE)
