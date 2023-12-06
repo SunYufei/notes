@@ -34,4 +34,12 @@ class HealthControllerTest {
             jsonPath("$.message") { value(ResultCode.EXCEPTION.message) }
         }.andDo { print() }
     }
+
+    @Test
+    fun body() {
+        mockMvc.get("/health/body?code=100").andExpect {
+            status { isOk() }
+            jsonPath("$.data") { value(100) }
+        }.andDo { print() }
+    }
 }

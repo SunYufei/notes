@@ -19,4 +19,7 @@ class HealthController {
 
     @GetMapping("error")
     fun error() = 1 / 0
+
+    @GetMapping("body")
+    fun body(@RequestParam code: Int) = code
 }
