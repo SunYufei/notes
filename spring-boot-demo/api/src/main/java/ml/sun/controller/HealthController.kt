@@ -2,6 +2,7 @@ package ml.sun.controller
 
 import ml.sun.common.result.BaseResult
 import ml.sun.common.result.ResultCode
+import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -18,5 +19,13 @@ class HealthController {
             BaseResult.success(param)
 
     @GetMapping("error")
-    fun error() = 1 / 0
+    fun error() {
+        throw ArithmeticException()
+    }
+
+    @GetMapping("body")
+    fun body(@RequestParam code: Int) = code
+
+    @GetMapping(path = ["html"], produces = [MediaType.TEXT_HTML_VALUE])
+    fun html() = "<html><header><title>HTML</title></header><body><h1>H1</h1></body></html>"
 }
