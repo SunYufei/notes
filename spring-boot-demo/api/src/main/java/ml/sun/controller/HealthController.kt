@@ -16,4 +16,7 @@ class HealthController {
             BaseResult.failure(ResultCode.ILLEGAL_ARGS, param)
         else
             BaseResult.success(param)
+
+    @GetMapping("error")
+    fun error() = 1 / 0
 }
