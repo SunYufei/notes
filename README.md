@@ -10,6 +10,8 @@
 
 [Android Jetpack](android-jetpack/)
 
+[设计模式](design-pattern/)
+
 [机器学习](ML/)
 
 [Spring Boot](spring-boot-demo/)

@@ -13,6 +13,10 @@ export default defineConfig({
             text: '博客',
             link: '/blog/',
          },
+         {
+            text: '设计模式',
+            link: '/design-pattern/',
+         },
       ],
       sidebar: {},
       socialLinks: [
