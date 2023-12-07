@@ -2,6 +2,7 @@ package ml.sun.common.ext
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
@@ -24,4 +25,6 @@ object JsonExt {
     }
 
     fun Any.toJson(): String = if (this is String) this else mapper.writeValueAsString(this)
+
+    fun JsonNode.getText(fieldName: String): String = this.get(fieldName).asText()
 }
