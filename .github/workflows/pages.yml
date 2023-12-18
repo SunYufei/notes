@@ -1,0 +1,43 @@
+name: deploy site to github pages
+
+on:
+   push:
+      branches: master
+
+jobs:
+   build:
+      runs-on: ubuntu-latest
+      env:
+         PAGES_PATH: docs/.vitepress/dist
+         REPO: https://github.com/SunYufei/sunyufei.github.io.git
+         BRANCH: master
+      steps:
+         - uses: actions/checkout@v4
+           with:
+              fetch-depth: 0
+         - name: Clone pages repo
+           run: |
+              git config --global url."https://x-access-token:${{ secrets.ACTIONS_TOKEN }}@github.com".insteadOf "https://github.com"
+              mkdir -p $PAGES_PATH
+              git clone $REPO $PAGES_PATH -b $BRANCH
+              ls $PAGES_PATH
+         - uses: actions/setup-node@v4
+           with:
+              node-version: 18
+         - name: Install dependencies
+           run: yarn install
+         - name: Build with VitePress
+           run: yarn build
+         - name: Push to pages repo
+           run: |
+              LAST_COMMIT=$(git rev-parse --short HEAD)
+              AUTHOR=$(git show --no-patch --format='%an' $LAST_COMMIT)
+              EMAIL=$(git show --no-patch --format='%ae' $LAST_COMMIT)
+              MESSAGE=$(git show --no-patch --format='%s' $LAST_COMMIT)
+              cd $PAGES_PATH
+              git config --global user.name $AUTHOR
+              git config --global user.email $EMAIL
+              git status
+              git add .
+              git commit -m "$MESSAGE"
+              git push -f origin $BRANCH

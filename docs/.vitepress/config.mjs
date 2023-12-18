@@ -4,8 +4,16 @@ export default defineConfig({
    lang: 'zh-CN',
    title: 'Notes',
    lastUpdated: true,
+   rewrites: {
+      ':path/README.md': ':path/index.md',
+   },
    themeConfig: {
-      nav: [],
+      nav: [
+         {
+            text: '博客',
+            link: '/blog/',
+         },
+      ],
       sidebar: {},
       socialLinks: [
          {
