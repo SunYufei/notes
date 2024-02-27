@@ -18,6 +18,11 @@
             <groupId>ml.sun</groupId>
             <artifactId>common</artifactId>
         </dependency>
+        <!-- service -->
+        <dependency>
+            <groupId>ml.sun</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
         <!-- web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
