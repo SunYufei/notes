@@ -1,6 +1,6 @@
 {
    "name": "notes",
-   "version": "23.12.6",
+   "version": "24.3.4",
    "scripts": {
       "build": "vitepress build docs",
       "dev": "vitepress dev docs"

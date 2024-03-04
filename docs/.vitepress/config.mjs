@@ -17,6 +17,10 @@ export default defineConfig({
             text: '设计模式',
             link: '/design-pattern/',
          },
+         {
+            text: 'Kotlin',
+            items: [{ text: '基础语法', link: '/kotlin/ch01' }],
+         },
       ],
       sidebar: {},
       socialLinks: [
