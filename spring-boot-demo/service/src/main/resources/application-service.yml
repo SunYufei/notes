@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: application-common.yml
   datasource:
     url: jdbc:h2:mem:design
     driver-class-name: org.h2.Driver
