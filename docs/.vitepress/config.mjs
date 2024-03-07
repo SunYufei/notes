@@ -19,7 +19,10 @@ export default defineConfig({
          },
          {
             text: 'Kotlin',
-            items: [{ text: '基础语法', link: '/kotlin/ch01' }],
+            items: [
+               { text: '基础语法', link: '/kotlin/ch01' },
+               { text: '类', link: '/kotlin/ch02' },
+            ],
          },
       ],
       sidebar: {},
