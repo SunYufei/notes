@@ -22,6 +22,7 @@ export default defineConfig({
             items: [
                { text: '基础语法', link: '/kotlin/ch01' },
                { text: '类', link: '/kotlin/ch02' },
+               { text: '函数和 Lambda 表达式', link: '/kotlin/ch03' },
             ],
          },
       ],
