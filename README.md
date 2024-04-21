@@ -18,6 +18,6 @@
 
 ## 许可
 
-代码：[MIT](LICENSE)
-
-文档：[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh)
+-  文章遵循 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 版权协议，转载请附上原文出处链接和声明
+-  代码遵循 [MIT](LICENSE) 开源协议
+-  Copyright © 2016-2024 SunYufei

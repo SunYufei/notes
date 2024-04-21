@@ -45,7 +45,7 @@ export default defineConfig({
       },
       footer: {
          message: 'All articles are under CC BY 4.0 license',
-         copyright: 'Copyright (c) 2016-2023 SunYufei',
+         copyright: `Copyright (c) 2016-${new Date().getFullYear()} SunYufei`,
       },
    },
 })

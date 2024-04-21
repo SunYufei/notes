@@ -1,13 +1,14 @@
 {
    "name": "notes",
-   "version": "24.3.4",
+   "version": "24.4",
+   "private": true,
+   "type": "module",
    "scripts": {
       "build": "vitepress build docs",
       "dev": "vitepress dev docs"
    },
    "devDependencies": {
-      "vitepress": "latest"
+      "vitepress": "1"
    },
-   "author": "SunYufei",
-   "license": "MIT"
+   "author": "SunYufei"
 }
