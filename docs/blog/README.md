@@ -1,3 +1,10 @@
-# 博客
+---
+title: 博客
+aside: false
+editLink: false
+lastUpdated: false
+showComment: false
+---
 
--  [使用 GitHub Actions 自动编译并推送至 Pages 仓库](deploy.md)
+<ClientOnly>
+</ClientOnly>

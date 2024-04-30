@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import nav from './config/nav.mjs'
 
 export default defineConfig({
    lang: 'zh-CN',
@@ -8,24 +9,7 @@ export default defineConfig({
       ':path/README.md': ':path/index.md',
    },
    themeConfig: {
-      nav: [
-         {
-            text: '博客',
-            link: '/blog/',
-         },
-         {
-            text: '设计模式',
-            link: '/design-pattern/',
-         },
-         {
-            text: 'Kotlin',
-            items: [
-               { text: '基础语法', link: '/kotlin/ch01' },
-               { text: '类', link: '/kotlin/ch02' },
-               { text: '函数和 Lambda 表达式', link: '/kotlin/ch03' },
-            ],
-         },
-      ],
+      nav,
       sidebar: {},
       socialLinks: [
          {
