@@ -5,5 +5,13 @@ spring:
     import: application-service.yml
 
 logging:
+  charset:
+    console: UTF-8
+    file: UTF-8
   file:
     name: log/${profileActive:dev}.log
+  level:
+    ml.sun: debug
+  threshold:
+    console: info
+    file: debug
