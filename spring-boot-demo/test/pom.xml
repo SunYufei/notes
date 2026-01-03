@@ -37,6 +37,10 @@
             <groupId>ml.sun</groupId>
             <artifactId>redis</artifactId>
         </dependency>
+        <dependency>
+            <groupId>ml.sun</groupId>
+            <artifactId>http-exchange</artifactId>
+        </dependency>
         <!-- test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

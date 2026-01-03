@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.10</version>
+        <version>3.5.9</version>
         <relativePath/>
     </parent>
 
@@ -23,13 +23,14 @@
         <module>jpa</module>
         <module>redis</module>
         <module>test</module>
+        <module>http-exchange</module>
     </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>2.0.20</kotlin.version>
+        <kotlin.version>2.2.20</kotlin.version>
     </properties>
 
     <dependencyManagement>
@@ -62,6 +63,11 @@
             <dependency>
                 <groupId>ml.sun</groupId>
                 <artifactId>redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ml.sun</groupId>
+                <artifactId>http-exchange</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
